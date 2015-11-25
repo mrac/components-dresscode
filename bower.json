@@ -1,0 +1,12 @@
+{
+  "name": "components-dresscode",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mrac/components-dresscode",
+  "authors": [
+    "Michal Raczkowski <michal.raczkowski@zalando.de>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dress-code": "https://github.com/zalando/dress-code.git#~0.1.0-alpha"
+  }
+}
