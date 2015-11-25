@@ -8,6 +8,7 @@ var rename = require('gulp-rename');
 gulp.task('sass', function () {
     gulp.src('./sass/all.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(rename('components-dresscode.css'))
         .pipe(gulp.dest('css'));
 });
 
