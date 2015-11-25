@@ -2,10 +2,11 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var rename = require('gulp-rename');
 
 
 gulp.task('sass', function () {
-    gulp.src('./bower_components/dress-code/dist/sass/toolkit.scss')
+    gulp.src('./sass/all.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('css'));
 });

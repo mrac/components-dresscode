@@ -1,0 +1,23 @@
+
+// components styled with dress-code
+
+
+/*
+  "body" is here to make selectors stronger so that they always overwrite default styles
+  regardless the order of files concatenation
+*/
+body {
+
+
+  .my-input {
+    input {
+      @extend .dc-input;
+    }
+    button {
+      @extend .dc-btn;
+    }
+  }
+
+
+}
+

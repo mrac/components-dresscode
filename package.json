@@ -1,6 +1,11 @@
 {
-    "devDependencies": {
-        "gulp": "^3.8.11",
-        "gulp-sass": "^2.0.0"
-    }
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.0",
+    "live-server": "^0.8.2"
+  },
+  "dependencies": {
+    "dress-code": "zalando/dress-code"
+  }
 }

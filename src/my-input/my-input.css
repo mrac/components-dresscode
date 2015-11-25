@@ -1,0 +1,13 @@
+.my-input input {
+    border: 3px solid black;
+    margin: 10px;
+}
+
+.my-input button {
+    display: inline-block;
+    padding: 0;
+    background: dimgrey;
+    border: 3px solid black;
+    color: white;
+    margin: 10px;
+}
