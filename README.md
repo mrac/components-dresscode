@@ -1,6 +1,6 @@
 # components-dresscode
 
-An example to 
+An example for a component library using dress-code UX library in a decoupled way with SASS.
 
 ## install dependencies
 
