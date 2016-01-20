@@ -11,10 +11,49 @@
 </head>
 <body>
 
-<div class="container"></div>
+<div id="fatherSurname"></div>
+<div id="sonSurname"></div>
 
 <script>
-    var myInput = new MyInput('.container');
+
+    // register elements
+
+    var fatherSurname = new MyInput('#fatherSurname');
+    fatherSurname.label = "Father Surname";
+    fatherSurname.clearLabel = "CLEAR";
+
+    var sonSurname = new MyInput('#sonSurname');
+    sonSurname.label = "Son Surname";
+    sonSurname.clearLabel = "CLEAR";
+
+
+    // set up bindings
+
+    fatherSurname.host.addEventListener('clear', function() {
+        console.log('clear father surname');
+    });
+
+    sonSurname.host.addEventListener('clear', function() {
+        console.log('clear son surname');
+    });
+
+
+    fatherSurname.host.addEventListener('changeText', function(ev) {
+        sonSurname.text = ev.detail.text;
+    });
+
+    sonSurname.host.addEventListener('changeText', function(ev) {
+        fatherSurname.text = ev.detail.text;
+    });
+
+
+    // set text and trigger text-change event
+
+    fatherSurname.text = "Kowalski";
+    fatherSurname.onTextChange();
+
+
 </script>
+
 </body>
 </html>
