@@ -22,11 +22,11 @@ motherSurname.host.addEventListener('clear', function() {
 });
 
 
-fatherSurname.host.addEventListener('changeText', function(ev) {
+fatherSurname.host.addEventListener('textChange', function(ev) {
     motherSurname.text = ev.detail.text;
 });
 
-motherSurname.host.addEventListener('changeText', function(ev) {
+motherSurname.host.addEventListener('textChange', function(ev) {
     fatherSurname.text = ev.detail.text;
 });
 

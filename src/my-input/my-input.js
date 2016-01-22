@@ -37,12 +37,12 @@ function MyInput(selector) {
     this._clearEvent.initCustomEvent(clearEventName, true, true, null);
     this._clearEvent.eventName = clearEventName;
 
-    // register custom event 'change'
-    var changeEventName = 'changeText';
-    this._changeEvent = document.createEvent('CustomEvent');
-    this._changeEventData = {};
-    this._changeEvent.initCustomEvent(changeEventName, true, true, this._changeEventData);
-    this._changeEvent.eventName = changeEventName;
+    // register custom event 'textChange'
+    var textChangeEventName = 'textChange';
+    this._textChangeEvent = document.createEvent('CustomEvent');
+    this._textChangeEventData = {};
+    this._textChangeEvent.initCustomEvent(textChangeEventName, true, true, this._textChangeEventData);
+    this._textChangeEvent.eventName = textChangeEventName;
 
     // read static attribute string values
     var attrs = {};
@@ -89,14 +89,14 @@ MyInput.prototype.onButtonClick = function() {
 
 
 MyInput.prototype.onTextChange = function() {
-    this._changeEventData.text = this._inputElem.value;
-    this.host.dispatchEvent(this._changeEvent);
+    this._textChangeEventData.text = this._inputElem.value;
+    this.host.dispatchEvent(this._textChangeEvent);
 };
 
 
 
 
-// ----- PUBLIC - properties and data binding -----
+// ----- PUBLIC - define properties & bind them to elements -----
 
 Object.defineProperty(MyInput.prototype, 'label', {
     get: function() {
