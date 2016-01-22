@@ -10,6 +10,9 @@ body {
 
 
   .my-input {
+    label {
+      @extend .dc-label;
+    }
     input {
       @extend .dc-input;
     }
